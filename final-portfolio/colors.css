@@ -1,0 +1,287 @@
+/* ============ colors.css : Dark + Gold Portfolio Theme ============ */
+
+:root {
+  --bg: #0a0a0c;
+  --bg-soft: #101014;
+  --card: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.09);
+
+  --text: #f4efe6;
+  --text-muted: #8d8a93;
+
+  --gold: #d4b06a;
+  --gold-light: #f5e6c4;
+  --gold-dark: #a8823a;
+  --gold-grad: linear-gradient(135deg, #e6c883 0%, #c9a45c 50%, #f5e6c4 100%);
+
+  --pink: #ec4899;
+  --purple: #a855f7;
+  --accent-grad: linear-gradient(90deg, #ec4899, #a855f7);
+  --rainbow: linear-gradient(90deg, #22c55e, #3b82f6, #ec4899, #f59e0b);
+}
+
+/* ---------- Base ---------- */
+html, body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212, 176, 106, 0.08), transparent 45%),
+    var(--bg) !important;
+}
+
+section, main, footer {
+  background: transparent !important;
+  color: var(--text);
+}
+
+p, span, li {
+  color: var(--text-muted);
+}
+
+h1, h2, h3, h4 {
+  color: var(--text) !important;
+}
+
+a { color: inherit; }
+
+::selection {
+  background: var(--gold);
+  color: #000;
+}
+
+/* ---------- Navbar (pill) ---------- */
+nav, header, .navbar, .nav, .header {
+  background: rgba(20, 20, 24, 0.75) !important;
+  border: 1px solid var(--border) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo, .brand, nav h1, nav h2 {
+  color: #fff !important;
+}
+.logo span, .brand span {
+  color: var(--gold) !important;
+}
+
+nav a, .navbar a, .nav a, .nav-links a, nav ul li a {
+  color: var(--text-muted) !important;
+  transition: color 0.3s ease;
+}
+nav a:hover, .navbar a:hover, .nav a:hover, .nav-links a:hover {
+  color: var(--gold-light) !important;
+}
+
+/* ---------- Hire Me button (rainbow border) ---------- */
+.hire-btn, .hire-me, .hire, nav .btn, nav button, nav .cta {
+  color: #fff !important;
+  background:
+    linear-gradient(var(--bg-soft), var(--bg-soft)) padding-box,
+    var(--rainbow) border-box !important;
+  border: 2px solid transparent !important;
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hire-btn:hover, .hire-me:hover, .hire:hover, nav .btn:hover, nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 26px rgba(168, 85, 247, 0.6);
+}
+
+/* ---------- Profile photo (gold ring + glow) ---------- */
+.profile-img, .hero-img, .photo, .avatar, .profile, .hero img, #home img {
+  border: 4px solid var(--gold) !important;
+  border-radius: 50%;
+  padding: 4px;
+  background: #0a0a0c;
+  box-shadow:
+    0 0 25px rgba(212, 176, 106, 0.45),
+    0 0 70px rgba(212, 176, 106, 0.18);
+}
+
+/* ---------- Hero text ---------- */
+.hero h1, #home h1, .hero-title, .name, h1 {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+.hero h3, .hero h2, #home h3, .subtitle, .tagline, .role {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+
+.hero small, .hero .tag, .intro, .btech, .hero-label, .label {
+  color: var(--text-muted) !important;
+  letter-spacing: 3px;
+}
+
+/* Experience pill ("6+ Years Editing Experience") */
+.experience, .exp, .badge, .pill {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-muted) !important;
+  border-radius: 50px;
+}
+
+/* ---------- Buttons ---------- */
+.btn, .button, a.btn, button, .hero a, .hero button {
+  transition: all 0.3s ease;
+}
+
+/* Primary (View My Skills) */
+.btn-primary, .btn.primary, .primary, .hero a:first-of-type, .hero .btn:first-child {
+  background: var(--gold-grad) !important;
+  color: #1a1304 !important;
+  border: none !important;
+  font-weight: 600;
+  box-shadow: 0 6px 25px rgba(212, 176, 106, 0.4);
+}
+.btn-primary:hover, .btn.primary:hover, .primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(212, 176, 106, 0.6);
+}
+
+/* Secondary (Contact Me) */
+.btn-secondary, .btn.secondary, .secondary, .hero a:last-of-type, .hero .btn:last-child {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+.btn-secondary:hover, .btn.secondary:hover, .secondary:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold-light) !important;
+}
+
+/* ---------- Section headings ---------- */
+.section-label, .section-tag, .sub-heading, section h6, section h5 {
+  color: var(--gold) !important;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Highlighted words inside headings */
+h1 span, h2 span, h3 span, .highlight, .gradient-text {
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about h2 span, #about h2 span, .gold-text {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Cards ---------- */
+.card, .skill-card, .service, .box, .tool-card, .info-card, .item {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover, .skill-card:hover, .service:hover, .box:hover, .tool-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 176, 106, 0.5) !important;
+  box-shadow: 0 14px 40px rgba(212, 176, 106, 0.12);
+}
+
+.card h3, .skill-card h3, .service h3, .box h3 {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+
+/* Icon boxes */
+.icon, .card i, .skill-card i, .service i {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #fff !important;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+  
+}
+
+/* ---------- Tags / chips (AI & ML Student, Editor...) ---------- */
+.tags span, .chip, .tag-item, .skills-tags span {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-muted) !important;
+  -webkit-text-fill-color: var(--text-muted);
+  border-radius: 50px;
+  padding: 6px 14px;
+}
+.tags span:hover, .chip:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold-light) !important;
+  -webkit-text-fill-color: var(--gold-light);
+}
+
+/* ---------- Tools roadmap glow nodes ---------- */
+.node, .tool-node, .tool-icon {
+  border-radius: 50%;
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.65);
+}
+.node:nth-child(odd), .tool-node:nth-child(odd) { box-shadow: 0 0 22px rgba(236, 72, 153, 0.65); }
+.node:nth-child(3n), .tool-node:nth-child(3n)   { box-shadow: 0 0 22px rgba(59, 130, 246, 0.65); }
+
+/* Detail card under roadmap */
+.tool-details, .details, .tool-info {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(168, 85, 247, 0.12)) !important;
+  border: 1px solid rgba(236, 72, 153, 0.3) !important;
+  border-radius: 20px;
+}
+
+/* ---------- Inputs (contact form) ---------- */
+input, textarea {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+  border-radius: 12px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(212, 176, 106, 0.2);
+}
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 10px;
+}
+
+
+
+/* ---------- Profile photo: ring + floating on the BOX ---------- */
+.profile-image {
+  box-sizing: border-box;
+  border: 4px solid var(--gold) !important;
+  padding: 4px;
+  background: #0a0a0c;
+  border-radius: 50%;
+  box-shadow:
+    0 0 25px rgba(212, 176, 106, 0.45),
+    0 0 70px rgba(212, 176, 106, 0.18);
+  animation: floatPhoto 4s ease-in-out infinite;
+}
+
+/* andar wali image ko plain rakho, wo box ke sath hi hilegi */
+.profile-image img {
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  animation: none !important;
+  border-radius: 50%;
+}

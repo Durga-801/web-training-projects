@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durga Prasad Yadav | Web Training Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0e0d0b;
+      --panel: #171512;
+      --line: #2b2822;
+      --text: #efe9dc;
+      --muted: #a59d8c;
+      --gold: #d4b06a;
+      --gold-soft: rgba(212, 176, 106, 0.14);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--ink);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 96px 0 64px; border-bottom: 1px solid var(--line); }
+
+    .hero p.tag { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+
+    .hero h1 {
+      font-family: "Fraunces", Georgia, "Times New Roman", serif;
+      font-weight: 800;
+      font-size: clamp(44px, 8vw, 84px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 em { font-style: normal; color: var(--gold); }
+
+    .hero .sub { margin-top: 22px; max-width: 560px; color: var(--muted); font-size: 18px; }
+
+    /* ---------- project rows ---------- */
+    .projects { padding: 20px 0 10px; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 34px 6px;
+      border-bottom: 1px solid var(--line);
+      transition: padding 0.3s ease, background 0.3s ease;
+    }
+
+    .row:hover { padding-left: 22px; background: var(--gold-soft); }
+
+    .row h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(26px, 4vw, 38px);
+      margin-bottom: 6px;
+    }
+
+    .row p { color: var(--muted); max-width: 560px; }
+
+    .chips { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .chip {
+      font-size: 13px;
+      padding: 3px 12px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      color: var(--text);
+    }
+
+    .chip.gold { border-color: var(--gold); color: var(--gold); }
+
+    .open {
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      padding: 10px 20px;
+      border: 1px solid var(--gold);
+      border-radius: 40px;
+      transition: all 0.3s;
+    }
+
+    .row:hover .open { background: var(--gold); color: var(--ink); }
+
+    /* ---------- basic vs final ---------- */
+    .compare { padding: 70px 0 40px; }
+
+    .compare h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .compare .lead { color: var(--muted); margin-bottom: 28px; }
+
+    .table {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+
+    .tr {
+      display: grid;
+      grid-template-columns: 1.1fr 1.4fr 1.4fr;
+      gap: 16px;
+      padding: 16px 22px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+    }
+
+    .tr:last-child { border-bottom: none; }
+    .tr.head { color: var(--muted); font-size: 13px; background: #1d1a16; }
+    .tr b { color: var(--gold); font-weight: 600; }
+
+    /* ---------- footer ---------- */
+    footer { padding: 50px 0 70px; color: var(--muted); font-size: 14px; }
+    footer strong { color: var(--text); }
+
+    @media (max-width: 680px) {
+      .hero { padding: 64px 0 44px; }
+      .row { grid-template-columns: 1fr; }
+      .open { justify-self: start; }
+      .tr { grid-template-columns: 1fr; gap: 4px; }
+      .tr.head { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .row, .open { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <p class="tag">Web Development Training · B.Tech (AI &amp; ML)</p>
+      <h1>Three pages,<br>one idea:<br><em>plain to polished.</em></h1>
+      <p class="sub">Practice projects by Durga Prasad Yadav. The same portfolio built twice, with and without CSS, and a shopping site in the style of Myntra.</p>
+    </header>
+
+    <main>
+      <section class="projects">
+
+        <a class="row" href="basic-portfolio/index.html">
+          <div>
+            <h2>Basic Portfolio</h2>
+            <p>The portfolio as raw HTML only. No colors, no layout. This is what the browser shows by default.</p>
+            <div class="chips"><span class="chip">HTML</span><span class="chip">No CSS</span></div>
+          </div>
+          <span class="open">Open page →</span>
+        </a>
+
+        <a class="row" href="final-portfolio/index.html">
+          <div>
+            <h2>Final Portfolio</h2>
+            <p>The same content, styled with a dark and gold theme, a sticky navbar, a hero section and hover effects.</p>
+            <div class="chips"><span class="chip">HTML</span><span class="chip gold">CSS</span></div>
+          </div>
+          <span class="open">Open page →</span>
+        </a>
+
+        <a class="row" href="myntra/index.html">
+          <div>
+            <h2>Myntra Style Store</h2>
+            <p>A shopping homepage with a sale banner, 16 product cards and a product page with size, bag and wishlist.</p>
+            <div class="chips"><span class="chip">HTML</span><span class="chip gold">CSS</span><span class="chip">A little JavaScript</span></div>
+          </div>
+          <span class="open">Open page →</span>
+        </a>
+
+      </section>
+
+      <section class="compare">
+        <h3>What changed between Basic and Final</h3>
+        <p class="lead">Same HTML content. The difference below comes only from CSS.</p>
+
+        <div class="table">
+          <div class="tr head"><span>Part</span><span>Basic Portfolio</span><span>Final Portfolio</span></div>
+          <div class="tr"><b>Colors</b><span>White page, black text, blue links</span><span>Dark background with gold accents</span></div>
+          <div class="tr"><b>Layout</b><span>Everything stacked in one column</span><span>Navbar, hero section and aligned blocks</span></div>
+          <div class="tr"><b>Buttons and links</b><span>Plain underlined links</span><span>Gold gradient buttons with hover effects</span></div>
+          <div class="tr"><b>Photo</b><span>Original size</span><span>Sized, framed and positioned</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>Durga Prasad Yadav</strong> · B.Tech (AI &amp; ML), SRMU</p>
+      <p>Made for web training practice. The Myntra page is a learning clone and is not affiliated with Myntra.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

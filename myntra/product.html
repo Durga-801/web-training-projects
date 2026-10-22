@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Product | Myntra Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    .gallery.single { grid-template-columns: 1fr; max-width: 560px; }
+ .gallery.single .g-tile { aspect-ratio: 4 / 5; }
+    .gallery.single .g-tile img { object-fit: cover; object-position: center top; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+<a href="index.html" class="logo">M</a>
+
+    <nav class="nav-links">
+ <a href="index.html#products" class="n-men">MEN</a>
+      <a href="index.html#products" class="n-women">WOMEN</a>
+ <a href="index.html#products" class="n-kids">KIDS</a>
+     <a href="index.html#products" class="n-home">HOME</a>
+<a href="index.html#products" class="n-genz">GENZ</a>
+    <a href="index.html#products" class="n-studio">STUDIO <span class="new">NEW</span></a>
+    </nav>
+
+    <div class="search">
+      <span>🔍</span>
+      <input type="text" placeholder="Search for products, brands and more">
+    </div>
+
+    <div class="nav-icons">
+<a href="#" class="icon"><span>👤</span>Profile</a>
+     <a href="#" class="icon"><span>🤍</span>Wishlist</a>
+ <a href="#" class="icon"><span>👜</span>Bag<b id="bagCount" class="badge"></b></a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="index.html#products">Shop</a> / <b id="crumbBrand"></b></p>
+
+    <div class="pdp">
+
+      <div class="gallery single">
+        <div class="g-tile"><img id="img1" alt=""></div>
+</div>
+      <div class="pdp-info">
+        <h1 id="brand"></h1>
+<p class="pname" id="pname"></p>
+
+<div class="rating-box"><b id="rate"></b> ★ <span>|</span> <span id="rcount"></span> Ratings</div>
+
+    <div class="pdp-price">
+          <span class="now" id="now"></span>
+    <span class="mrp">MRP <s id="mrp"></s></span>
+          <span class="pct" id="pct"></span>
+        </div>
+    <p class="tax">inclusive of all taxes</p>
+
+        <div id="sizeBlock">
+    <h4 class="pdp-h">SELECT SIZE</h4>
+          <div class="sizes" id="sizes"></div>
+      </div>
+        <div class="pdp-actions">
+       <button class="add-bag" id="addBag">👜 ADD TO BAG</button>
+   <button class="wish-btn" id="wishBtn">🤍 WISHLIST</button>
+ </div>
+        <hr>
+ <h4 class="pdp-h">DELIVERY OPTIONS 🚚</h4>
+        <div class="pin">
+   <input type="text" placeholder="Enter pincode" maxlength="6">
+          <button>CHECK</button>
+</div>
+        <p class="note">100% Original Products</p>
+        <p class="note">Pay on delivery might be available</p>
+<p class="note">Easy 14 days returns and exchanges</p>
+
+     <hr>
+
+ <h4 class="pdp-h">PRODUCT DETAILS</h4>
+        <p class="note" id="detail"></p>
+    </div>
+    </div>
+  </main>
+
+  <div id="toast"></div>
+
+  <footer class="footer">
+    <div class="footer-cols">
+      <div>
+  <h4>ONLINE SHOPPING</h4>
+  <a href="#">Men</a><a href="#">Women</a><a href="#">Kids</a><a href="#">Home &amp; Living</a>
+      </div>
+    <div>
+  <h4>CUSTOMER POLICIES</h4>
+       <a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Returns</a><a href="#">Track Orders</a>
+      </div>
+    <div>
+        <h4>USEFUL LINKS</h4>
+        <a href="#">Blog</a><a href="#">Careers</a><a href="#">Site Map</a><a href="#">Gift Cards</a>
+</div>
+      <div>
+   <h4>KEEP IN TOUCH</h4>
+        <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Twitter</a><a href="#">YouTube</a>
+     </div>
+    </div>
+    <p class="copy">© 2026 Myntra Clone. Made by Durga Prasad Yadav for web training practice.</p>
+  </footer>
+
+  <script>
+    const products = {
+  "tshirt": {
+    "brand": "Roadster",
+"name": "Men Cotton Casual T-Shirt",
+    "price": 399,
+   "mrp": 999,
+  "sizes": [
+    "S",
+      "M",
+   "L",
+      "XL",
+      "XXL"
+    ],
+"detail": "Cotton, regular fit, round neck, short sleeves",
+    "rating": "4.2",
+ "count": "3.4k"
+  },
+  "kurta": {
+    "brand": "Libas",
+  "name": "Women Printed Kurta Set",
+  "price": 899,
+  "mrp": 2499,
+    "sizes": [
+           "S",
+   "M",
+      "L",
+  "XL"
+   ],
+    "detail": "Kurta with palazzo, printed, 3/4 sleeves",
+   "rating": "4.0",
+    "count": "1.8k"
+  },
+  "shoes": {
+    "brand": "Puma",
+   "name": "Unisex Running Shoes",
+  "price": 2199,
+    "mrp": 4999,
+ "sizes": [
+  "6",
+    "7",
+      "8",
+   "9",
+      "10",
+   "11"
+    ],
+    "detail": "Mesh upper, cushioned sole, lace-up closure",
+"rating": "4.3",
+    "count": "5.1k"
+  },
+  "jeans": {
+    "brand": "Levis",
+ "name": "Men Slim Fit Jeans",
+    "price": 1499,
+ "mrp": 3299,
+    "sizes": [
+  "28",
+      "30",
+    "32",
+      "34",
+      "36"
+    ],
+    "detail": "Stretch denim, slim fit, mid rise",
+ "rating": "4.1",
+    "count": "2.7k"
+  },
+  "watch": {
+    "brand": "Fossil",
+    "name": "Men Analogue Watch",
+ "price": 5495,
+    "mrp": 10995,
+    "sizes": [],
+"detail": "Stainless steel case, leather strap, water resistant",
+    "rating": "4.4",
+    "count": "980"
+  },
+  "bag": {
+ "brand": "Lavie",
+    "name": "Women Structured Handbag",
+    "price": 1299,
+    "mrp": 3499,
+ "sizes": [],
+    "detail": "Structured shape, zip closure, 2 inner pockets",
+    "rating": "3.9",
+    "count": "1.2k"
+  },
+  "jacket": {
+ "brand": "HRX",
+    "name": "Men Hooded Jacket",
+ "price": 1799,
+    "mrp": 3999,
+ "sizes": [
+      "S",
+ "M",
+      "L",
+      "XL"
+    ],
+    "detail": "Hooded, full sleeves, zip front, 2 pockets",
+    "rating": "4.2",
+    "count": "2.2k"
+  },
+  "sunglasses": {
+    "brand": "Ray-Ban",
+ "name": "Unisex Aviator Sunglasses",
+    "price": 3990,
+ "mrp": 7490,
+    "sizes": [],
+ "detail": "Aviator frame, UV protected lenses",
+    "rating": "4.5",
+    "count": "760"
+  },
+  "hoodie": {
+    "brand": "Nike",
+ "name": "Men Sports Hoodie",
+    "price": 1999,
+ "mrp": 4495,
+    "sizes": [
+      "S",
+  "M",
+  "L",
+      "XL"
+    ],
+    "detail": "Fleece fabric, kangaroo pocket, regular fit",
+    "rating": "4.1",
+    "count": "3.0k"
+  },
+  "saree": {
+    "brand": "Sangria",
+ "name": "Women Silk Blend Saree",
+    "price": 1599,
+    "mrp": 4999,
+"sizes": [],
+    "detail": "Silk blend, woven border, comes with blouse piece",
+ "rating": "4.0",
+    "count": "1.5k"
+  },
+  "sandals": {
+    "brand": "Skechers",
+    "name": "Men Casual Sandals",
+    "price": 1799,
+    "mrp": 3299,
+    "sizes": [
+  "6",
+      "7",
+  "8",
+      "9",
+  "10"
+    ],
+    "detail": "Velcro closure, cushioned footbed, durable sole",
+    "rating": "4.2",
+    "count": "2.4k"
+  },
+  "cap": {
+ "brand": "Adidas",
+    "name": "Unisex Baseball Cap",
+    "price": 699,
+    "mrp": 1399,
+ "sizes": [],
+    "detail": "Cotton, adjustable strap, curved brim",
+    "rating": "4.3",
+    "count": "1.1k"
+  },
+  "shirt": {
+    "brand": "Van Heusen",
+    "name": "Men Formal Shirt",
+    "price": 999,
+    "mrp": 2199,
+    "sizes": [
+      "38",
+ "39",
+      "40",
+     "42",
+      "44"
+    ],
+    "detail": "Cotton blend, slim fit, full sleeves, spread collar",
+    "rating": "4.1",
+    "count": "4.2k"
+  },
+  "kidswear": {
+    "brand": "Mothercare",
+    "name": "Kids Cotton Dress",
+    "price": 549,
+    "mrp": 1099,
+"sizes": [
+      "2-3Y",
+    "3-4Y",
+   "4-5Y",
+  "5-6Y"
+    ],
+    "detail": "Soft cotton, round neck, comfortable for daily wear",
+    "rating": "4.4",
+    "count": "890"
+  },
+  "perfume": {
+    "brand": "Fogg",
+ "name": "Men Eau De Parfum",
+ "price": 349,
+    "mrp": 699,
+    "sizes": [],
+ "detail": "100 ml, long lasting fragrance, fresh woody notes",
+    "rating": "4.0",
+ "count": "6.3k"
+  },
+  "backpack": {
+    "brand": "Wildcraft",
+ "name": "Unisex Laptop Backpack",
+    "price": 1199,
+  "mrp": 2499,
+    "sizes": [],
+ "detail": "Fits 15.6 inch laptop, 3 compartments, padded straps",
+    "rating": "4.2",
+    "count": "2.9k"
+  }
+};
+
+    const id = new URLSearchParams(location.search).get("id");
+    const p = products[id] || products.tshirt;
+ const img = "image/" + (products[id] ? id : "tshirt") + ".jpg";
+
+    const off = Math.round((1 - p.price / p.mrp) * 100);
+    const money = n => "₹" + n.toLocaleString("en-IN");
+
+ document.title = p.brand + " " + p.name + " | Myntra Clone";
+    document.getElementById("crumbBrand").textContent = p.brand;
+document.getElementById("brand").textContent = p.brand;
+    document.getElementById("pname").textContent = p.name;
+ document.getElementById("rate").textContent = p.rating;
+    document.getElementById("rcount").textContent = p.count;
+document.getElementById("now").textContent = money(p.price);
+document.getElementById("mrp").textContent = money(p.mrp);
+ document.getElementById("pct").textContent = "(" + off + "% OFF)";
+    document.getElementById("detail").textContent = p.detail;
+    ["img1"].forEach(i => {
+   const el = document.getElementById(i);
+ el.src = img;
+      el.alt = p.brand + " " + p.name;
+ });
+
+    let chosenSize = null;
+    const sizeBox = document.getElementById("sizes");
+    if (p.sizes.length === 0) {
+      document.getElementById("sizeBlock").style.display = "none";  // bag, watch jaise items me size nahi
+    } else {
+      p.sizes.forEach(s => {
+     const b = document.createElement("button");
+    b.className = "size";
+     b.textContent = s;
+   b.onclick = () => {
+          chosenSize = s;
+ document.querySelectorAll(".size").forEach(x => x.classList.remove("selected"));
+  b.classList.add("selected");
+   };
+   sizeBox.appendChild(b);
+      });
+    
+  const toast = document.getElementById("toast");
+ function showToast(msg) {
+     toast.textContent = msg;
+      toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 2200);
+    
+    let bagCount = 0;
+ document.getElementById("addBag").onclick = () => {
+      if (p.sizes.length > 0 && !chosenSize) {
+ showToast("Please select a size");
+        return;
+  }
+      bagCount++;
+ const badge = document.getElementById("bagCount");
+badge.textContent = bagCount;
+    badge.style.display = "grid";
+      showToast("Added to bag ✓");
+    };
+  const wishBtn = document.getElementById("wishBtn");
+  wishBtn.onclick = () => {
+   wishBtn.classList.toggle("on");
+      const on = wishBtn.classList.contains("on");
+   wishBtn.textContent = on ? "❤️ WISHLISTED" : "🤍 WISHLIST";
+      showToast(on ? "Added to wishlist" : "Removed from wishlist");
+    };
+ </script>
+
+</body>
+</html>

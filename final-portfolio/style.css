@@ -1,0 +1,424 @@
+s/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 14px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid;
+    border-radius: 40px;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.nav-button a {
+    text-decoration: none;
+    padding: 10px 22px;
+    border: 1px solid;
+    border-radius: 30px;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 950px;
+}
+
+.hero-small-text {
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 10vw, 145px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.hero-small-text) {
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 14px 28px;
+
+    text-decoration: none;
+
+    border: 1px solid;
+    border-radius: 30px;
+}
+
+
+/* ================================
+   ALL SECTIONS
+================================ */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 100px 0;
+}
+
+
+/* ================================
+   SECTION HEADING
+================================ */
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    max-width: 750px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: 22px;
+    max-width: 650px;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-card {
+    min-height: 180px;
+    padding: 25px;
+
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.about-card h3 {
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    padding: 30px;
+    min-height: 230px;
+
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skill-card ul {
+    padding-left: 20px;
+}
+
+
+/* ================================
+   TOOLS
+================================ */
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tool-card {
+    padding: 30px;
+    min-height: 240px;
+
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.tool-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tool-card p {
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   YOUTUBE
+================================ */
+
+.youtube-content {
+    max-width: 800px;
+}
+
+.youtube-content h3 {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.youtube-content p {
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-content p {
+    margin-bottom: 20px;
+}
+
+.contact-content a {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 14px 28px;
+
+    border: 1px solid;
+    border-radius: 30px;
+
+    text-decoration: none;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+
+    border-top: 1px solid;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .youtube-content h3 {
+        font-size: 42px;
+    }
+
+}
+/* Center main section headings */
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading p {
+    text-align: center;
+}
+/* Profile Image */
+
+.profile-image {
+ width: 200px;
+ height: 200px;
+ margin: 0 auto 25px;
+   border-radius: 50%;
+   overflow: hidden;
+ }
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+
+
+
+
+
+    
+}
