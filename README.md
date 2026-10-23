@@ -34,20 +34,7 @@ The HTML content is the same in both. Every difference below comes from CSS.
 | Buttons and links | Plain underlined links | Gold gradient buttons with hover effects |
 | Photo | Original size | Sized, framed and positioned |
 
-<table>
-  <tr>
-    <td align="center"><b>Basic</b></td>
-    <td align="center"><b>Final</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/basic.png" alt="Basic portfolio without CSS" width="100%"></td>
-    <td><img src="screenshots/final.png" alt="Final portfolio with CSS" width="100%"></td>
-  </tr>
-</table>
-
 ## Myntra style store
-
-<img src="screenshots/myntra.png" alt="Myntra style homepage" width="100%">
 
 - Sticky navbar with a different hover color for each menu, like the real app
 - Ticket style offer strip, festival banner and brand strip
@@ -61,7 +48,6 @@ The HTML content is the same in both. Every difference below comes from CSS.
 web-training-projects/
 ├── index.html            landing page that links all projects
 ├── README.md
-├── screenshots/
 ├── basic-portfolio/      HTML only
 │   ├── index.html
 │   └── image/
