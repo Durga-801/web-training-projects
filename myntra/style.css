@@ -1,4 +1,4 @@
-/* ============ BASE ============ */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -434,7 +434,6 @@ background: #e8453c;
   .mega-off { font-size: 48px; }
 }
 
-/* ======================================================
    CARD AB LINK HAI (click karne par product page khulta hai)
    ====================================================== */
 a.card { display: block; color: inherit; }
@@ -456,9 +455,8 @@ a.card { display: block; color: inherit; }
   border-radius: 9px;
 }
 
-/* ======================================================
-   PRODUCT PAGE (product.html)
-   ====================================================== */
+
+    */
 .crumbs { margin: 24px 0 18px; font-size: 14px; color: var(--grey); }
 .crumbs a:hover { color: var(--pink); }
 .crumbs b { color: var(--dark); }
