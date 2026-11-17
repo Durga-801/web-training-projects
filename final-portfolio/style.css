@@ -1,18 +1,18 @@
 s/
 
 * {
-    margin: 0;
-    padding: 0;
+     margin: 0;
+           padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+       scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+        line-height: 1.6;
 }
 header {
     width: 100%;
@@ -20,8 +20,8 @@ header {
 
 nav {
     width: 90%;
-    max-width: 1100px;
-    margin: 25px auto;
+     max-width: 1100px;
+      margin: 25px auto;
     padding: 14px 20px;
 
     display: flex;
@@ -38,7 +38,7 @@ nav {
 
 .nav-links {
     display: flex;
-    align-items: center;
+      align-items: center;
     gap: 30px;
 
     list-style: none;
@@ -47,19 +47,18 @@ nav {
 .nav-links a {
     text-decoration: none;
     font-size: 13px;
-    letter-spacing: 2px;
+      letter-spacing: 2px;
 }
 
 .nav-button a {
     text-decoration: none;
-    padding: 10px 22px;
+      padding: 10px 22px;
     border: 1px solid;
-    border-radius: 30px;
+      border-radius: 30px;
 }
 .hero {
     min-height: 620px;
-
-    display: flex;
+      display: flex;
     align-items: center;
     justify-content: center;
 
